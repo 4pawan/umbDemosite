@@ -57,7 +57,6 @@ D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\bin\System.Web.Webpages
 D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\bin\System.Web.Helpers.xml
 D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\bin\System.Web.Mvc.xml
 D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\obj\Debug\umbDemosite.csprojAssemblyReference.cache
 D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\obj\Debug\umbDemosite.csproj.CoreCompileInputs.cache
 D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\obj\Debug\umbDemosite.csproj.CopyComplete
 D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\obj\Debug\umbDemosite.dll
@@ -231,3 +230,4 @@ D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\bin\ru\Microsoft.CodeAn
 D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\bin\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\bin\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\bin\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\obj\Debug\umbDemosite.csprojAssemblyReference.cache

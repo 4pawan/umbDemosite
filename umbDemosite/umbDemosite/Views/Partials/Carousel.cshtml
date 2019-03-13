@@ -1,74 +1,49 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+﻿@using System.Collections
+@using Newtonsoft.Json
+@using umbDemosite.Implementation.Mapper
+@using cm = Umbraco.Web.PublishedModels;
+@inherits UmbracoViewPage
 
 @{
-	var selection = Umbraco.ContentAtRoot().FirstOrDefault()
-    .Children("metaData")
-    .Where(x => x.IsVisible());
+  var carouseljson = Umbraco.AssignedContentItem.GetProperty("carousel").GetSourceValue().ToString();
+  var result = JsonConvert.DeserializeObject<IEnumerable<CarouselModel>>(carouseljson);
 }
-
 
 <!-- [Homepage Carousell] -->
 <div id="carousel_1" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carousel_1" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel_1" data-slide-to="1" class=""></li>
-    <li data-target="#carousel_1" data-slide-to="2" class=""></li>
-    <li data-target="#carousel_1" data-slide-to="3" class=""></li>
+      @for (int i = 0; i < result.Count(); i++)
+      {
+        <li data-target="#carousel_1" data-slide-to="@i" class="@i==0 ? 'active':'' "></li>     
+      }
   </ol>
   <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <div class="jumbotron jumbotron-xl bg-media" style="background-image: url(/Assets/images/carousel-climbing.jpg)">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h1>Climbing</h1>
-              <p class="lead">Up for challenge? See our climbing events.</p>
-              <a class="btn btn-hollow btn-lg" href="Event-List.html">Read more</a>
+    @{
+      int index = 0;
+      foreach (var item in result)
+      {
+        index++;
+        var cls = index == 1 ? "active" : "";
+        var img = Umbraco.Media(item.carouselImage);
+
+
+        <div class="item @cls">
+          <div class="jumbotron jumbotron-xl bg-media" style="background-image: url(@img.Url)">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>@item.carouselHeading</h1>
+                  <p class="lead">@item.carouselText</p>
+                  <a class="btn btn-hollow btn-lg" href="Event-List.html">Read more</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="jumbotron jumbotron-xl bg-media" style="background-image: url(/Assets/images/carousel-cycling.jpg)">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h1>Cycling</h1>
-              <p class="lead">Happy couple cycling in canola fields.</p>
-              <a class="btn btn-hollow btn-lg" href="Event-List.html">Read more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="jumbotron jumbotron-xl bg-media" style="background-image: url(/Assets/images/carousel-hiking.jpg)">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h1>Hiking </h1>
-              <p class="lead">Hikers group trekking in Crimea.</p>
-              <a class="btn btn-hollow btn-lg" href="Event-List.html">Read more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="jumbotron jumbotron-xl bg-media" style="background-image: url(/Assets/images/carousel-skiing.jpg)">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <h1>Skiing</h1>
-              <p class="lead">Join our skiing event!</p>
-              <a class="btn btn-hollow btn-lg" href="Event-List.html">Read more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      }
+    }
   </div>
+
   <a class="left carousel-control" href="#carousel_1" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>

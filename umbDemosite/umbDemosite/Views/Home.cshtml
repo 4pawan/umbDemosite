@@ -1,13 +1,14 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
-@using ContentModels = Umbraco.Web.PublishedModels;
+﻿@using ContentModels = Umbraco.Web.PublishedModels;
+@inherits UmbracoViewPage
+
 @{
-	Layout = "master.cshtml";
+  Layout = "master.cshtml";
 }
 
 <main>
   <header class="page-header">
     @{
-        Html.RenderPartial("/Views/Partials/Carousel.cshtml");
+      Html.RenderPartial("/Views/Partials/Carousel.cshtml");
     }
   </header>
   <section class="section section-full">

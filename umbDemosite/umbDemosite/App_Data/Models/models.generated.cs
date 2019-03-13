@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5d21998836db599b")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "dbd5d314a8aa7dc")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
@@ -204,7 +204,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.0.1")]
 		[ImplementPropertyType("footerLinks")]
-		public IEnumerable<Umbraco.Web.Models.Link> FooterLinks => this.Value<IEnumerable<Umbraco.Web.Models.Link>>("footerLinks");
+		public Umbraco.Web.Models.Link FooterLinks => this.Value<Umbraco.Web.Models.Link>("footerLinks");
 
 		///<summary>
 		/// Page Title
@@ -397,6 +397,13 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// Slide Link
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.0.1")]
+		[ImplementPropertyType("slideLink")]
+		public Umbraco.Web.Models.Link SlideLink => this.Value<Umbraco.Web.Models.Link>("slideLink");
 
 		///<summary>
 		/// Slide Heading

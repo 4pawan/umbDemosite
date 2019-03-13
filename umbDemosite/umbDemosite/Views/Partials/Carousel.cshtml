@@ -1,12 +1,13 @@
 ﻿@using System.Collections
 @using Newtonsoft.Json
-@using umbDemosite.Implementation.Mapper
+@using umbDemosite.Implementation.Helper
+@using umbDemosite.Models
 @using cm = Umbraco.Web.PublishedModels;
 @inherits UmbracoViewPage
 
 @{
   var carouseljson = Umbraco.AssignedContentItem.GetProperty("carousel").GetSourceValue().ToString();
-  var result = JsonConvert.DeserializeObject<IEnumerable<CarouselModel>>(carouseljson);
+  var result = Helper.GetCarouselObject(carouseljson);
 }
 
 <!-- [Homepage Carousell] -->
@@ -34,7 +35,7 @@
                 <div class="col-md-12">
                   <h1>@item.carouselHeading</h1>
                   <p class="lead">@item.carouselText</p>
-                  <a class="btn btn-hollow btn-lg" href="Event-List.html">Read more</a>
+                  <a class="btn btn-hollow btn-lg" href="@item.SlideLinkAsObjects[0].url">@item.SlideLinkAsObjects[0].name</a>
                 </div>
               </div>
             </div>

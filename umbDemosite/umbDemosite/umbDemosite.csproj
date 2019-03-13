@@ -449,7 +449,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Implementation\Helper\Helper.cs" />
     <Compile Include="Implementation\Mapper\CustomGridJsonValueMapper.cs" />
+    <Compile Include="Models\AnchorLink.cs" />
+    <Compile Include="Models\CarouselModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -562,7 +565,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\MacroPartials\" />
   </ItemGroup>
   <ItemGroup>

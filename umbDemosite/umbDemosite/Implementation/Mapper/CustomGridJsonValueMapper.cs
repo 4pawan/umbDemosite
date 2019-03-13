@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using umbDemosite.Models;
 using Umbraco.Core;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.PropertyEditors;
@@ -56,16 +57,4 @@ namespace umbDemosite.Implementation.Mapper
         //    throw new NotImplementedException();
         //}
     }
-
-    public class CarouselModel
-    {
-        public string key { get; set; }
-        public string name { get; set; }
-        public string ncContentTypeAlias { get; set; }
-        public string carouselHeading { get; set; }
-        public string carouselImage { get; set; }
-        public string carouselText { get; set; }
-    }
-
-
 }

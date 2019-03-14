@@ -16,9 +16,12 @@
   <ol class="carousel-indicators">
     @foreach (var item in result)
     {
-      <li data-target="@item.SlideLinkAsObjects[0].url" data-slide-to="@item" class="@index==0 ? 'active':'' "></li>
-      index++;
-    }
+      if (item.SlideLinkAsObjects.Any())
+      {
+        <li data-target="@item.SlideLinkAsObjects[0].url" data-slide-to="@item" class="@index==0 ? 'active':'' "></li>
+        index++;
+      }
+      }
   </ol>
   <div class="carousel-inner" role="listbox">
     @{
@@ -37,7 +40,7 @@
                 <div class="col-md-12">
                   <h1>@item.carouselHeading</h1>
                   <p class="lead">@item.carouselText</p>
-                  <a class="btn btn-hollow btn-lg" href="@item.SlideLinkAsObjects[0].url">@item.SlideLinkAsObjects[0].name</a>
+                  <a class="btn btn-hollow btn-lg" href="">@(item.SlideLinkAsObjects.Any() ? item.SlideLinkAsObjects[0].name :"ReadMore")</a>
                 </div>
               </div>
             </div>

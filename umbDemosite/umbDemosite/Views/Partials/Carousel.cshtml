@@ -8,19 +8,21 @@
 @{
   var carouseljson = Umbraco.AssignedContentItem.GetProperty("carousel").GetSourceValue().ToString();
   var result = Helper.GetCarouselObject(carouseljson);
+  int index = 0;
 }
 
 <!-- [Homepage Carousell] -->
 <div id="carousel_1" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-      @for (int i = 0; i < result.Count(); i++)
-      {
-        <li data-target="#carousel_1" data-slide-to="@i" class="@i==0 ? 'active':'' "></li>     
-      }
+    @foreach (var item in result)
+    {
+      <li data-target="@item.SlideLinkAsObjects[0].url" data-slide-to="@item" class="@index==0 ? 'active':'' "></li>
+      index++;
+    }
   </ol>
   <div class="carousel-inner" role="listbox">
     @{
-      int index = 0;
+      index = 0;
       foreach (var item in result)
       {
         index++;

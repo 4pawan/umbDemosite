@@ -358,6 +358,9 @@
     <Reference Include="Umbraco.ModelsBuilder, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Umbraco.ModelsBuilder.8.0.1\lib\net472\Umbraco.ModelsBuilder.dll</HintPath>
     </Reference>
+    <Reference Include="Umbraco.ModelsBuilder.Api, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Umbraco.ModelsBuilder.Api.8.0.0\lib\Umbraco.ModelsBuilder.Api.dll</HintPath>
+    </Reference>
     <Reference Include="Umbraco.Web, Version=8.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Web.8.0.0\lib\net472\Umbraco.Web.dll</HintPath>
     </Reference>
@@ -442,7 +445,9 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -452,6 +457,9 @@
     <Compile Include="Implementation\Helper\Helper.cs" />
     <Compile Include="Implementation\Mapper\CustomGridJsonValueMapper.cs" />
     <Compile Include="Models\AnchorLink.cs" />
+    <Compile Include="Models\Builder.cs">
+      <Generator>UmbracoModelsBuilder</Generator>
+    </Compile>
     <Compile Include="Models\CarouselModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

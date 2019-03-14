@@ -1,0 +1,37 @@
+﻿@using StackExchange.Profiling.Internal
+@using umbDemosite.Implementation
+@using cm = Umbraco.Web.PublishedModels;
+@inherits UmbracoViewPage
+
+@{
+  var tourList = Umbraco.ContentAtRoot().FirstOrDefault().Children("tour")
+ .Where(x => x.IsVisible())
+ .OrderBy(x => x.Name);
+}
+
+<div class="container">
+  <div class="row">
+
+    @{
+      foreach (var tour in tourList)
+      {
+        var img = tour.GetProperty("heroImage").GetSourceValue().ToMediaUrl();
+
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <a href="Event-Detail.html">
+              <img src="@img" class="img-responsive" alt="Hiking the Italian Alps" width="500" height="333" />
+            </a>
+            <div class="caption">
+              <h3 class="teaser-heading">@tour.GetProperty("heroTitle").GetValue()</h3>
+              <p>
+                @tour.GetProperty("heroDescription").GetValue()
+              </p>
+              <a href="Event-Detail.html" class="btn btn-default">Read more</a>
+            </div>
+          </div>
+        </div>
+      }
+    }
+  </div>
+</div>

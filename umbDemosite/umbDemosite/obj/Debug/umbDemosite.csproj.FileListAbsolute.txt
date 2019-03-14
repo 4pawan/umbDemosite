@@ -232,4 +232,3 @@ D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\bin\zh-Hans\Microsoft.C
 D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\bin\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\bin\Umbraco.ModelsBuilder.Api.dll
 D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\bin\Umbraco.ModelsBuilder.Api.pdb
-D:\Project\Temp\Umbraco\Demosite\umbDemosite\umbDemosite\obj\Debug\umbDemosite.csprojAssemblyReference.cache

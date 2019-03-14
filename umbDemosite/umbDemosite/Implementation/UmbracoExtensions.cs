@@ -12,7 +12,12 @@ namespace umbDemosite.Implementation
         private static UmbracoHelper _umbHelper;
         public static UmbracoHelper UmbHelper
         {
-            get { return _umbHelper ?? (_umbHelper = Umbraco.Web.Composing.Current.UmbracoHelper); }
+            get
+            {
+                if (_umbHelper == null)
+                    _umbHelper = Umbraco.Web.Composing.Current.UmbracoHelper;
+                return _umbHelper;
+            }
         }
 
         public static string ToMediaUrl(this object content)

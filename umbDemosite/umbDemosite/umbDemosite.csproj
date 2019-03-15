@@ -454,6 +454,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Implementation\MyComposer.cs" />
     <Compile Include="Implementation\Helper\Helper.cs" />
     <Compile Include="Implementation\Mapper\CustomGridJsonValueMapper.cs" />
     <Compile Include="Implementation\UmbracoExtensions.cs" />

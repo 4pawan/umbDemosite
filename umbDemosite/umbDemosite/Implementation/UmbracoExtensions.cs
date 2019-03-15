@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Umbraco.Core.Collections;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 
@@ -24,6 +25,16 @@ namespace umbDemosite.Implementation
         {
             return UmbHelper.Media(content).Url;
         }
+
+        //public static IPublishedContent GetCurrentNodeId(this object content)
+        //{
+        //    return UmbHelper.ty(TopoGraph.Node<,>.getCurrentNodeId());
+
+        //}
+
+
+
+
 
         /// <summary>
         /// Aliases of doctypes that should be excluded from navigation etc.

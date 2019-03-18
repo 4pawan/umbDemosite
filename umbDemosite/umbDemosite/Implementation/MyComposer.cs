@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Web.Http.ModelBinding;
 using Umbraco.Core;
 using Umbraco.Core.Composing;
 using Umbraco.Core.Events;
@@ -39,11 +40,13 @@ namespace umbDemosite.Implementation
         private void ContentService_Saving(IContentService sender, ContentSavingEventArgs e)
         {
             //Check if the content item type has a specific alias
-            foreach (var content in e.SavedEntities.Where(c => c.ContentType.Alias.InvariantEquals("Tour")))
+            foreach (IContent content in e.SavedEntities.Where(c => c.ContentType.Alias.InvariantEquals("Tour")))
             {
                 //Do something if the content is using the MyContentType doctype
                 if (content.Id <= 0) //new record
                 {
+                    
+
                     //e.Cancel = true;
                 }
                 else //existing record

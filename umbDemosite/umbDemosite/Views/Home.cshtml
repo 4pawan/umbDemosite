@@ -1,4 +1,5 @@
-﻿@using ContentModels = Umbraco.Web.PublishedModels;
+﻿@using umbDemosite.Models
+@using ContentModels = Umbraco.Web.PublishedModels;
 @inherits UmbracoViewPage
 
 @{
@@ -76,5 +77,6 @@
       </div>
     </div>
     <!-- [/Upcoming Events] -->
+    @Html.Partial("/Views/Partials/TourForm.cshtml",new TourViewModel());
   </section>
 </main>

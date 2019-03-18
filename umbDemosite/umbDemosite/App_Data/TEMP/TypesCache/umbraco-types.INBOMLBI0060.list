@@ -338,9 +338,10 @@ Umbraco.Web.Cache.MemberGroupCacheRefresher, Umbraco.Web, Version=8.0.0.0, Cultu
 Umbraco.Web.Cache.PublicAccessCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.TemplateCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.UserCacheRefresher, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Api.ModelsBuilderApiComposer, Umbraco.ModelsBuilder.Api, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 umbDemosite.Implementation.MyComposer, umbDemosite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 umbDemosite.Implementation.Mapper.JsonValueConverter, umbDemosite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+umbDemosite.Controllers.ContactFormController, umbDemosite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Api.ModelsBuilderApiComposer, Umbraco.ModelsBuilder.Api, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.Composing.IComposer
 
@@ -364,8 +365,8 @@ Umbraco.Web.Compose.NotificationsComposer, Umbraco.Web, Version=8.0.0.0, Culture
 Umbraco.Web.Compose.PublicAccessComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Compose.DatabaseServerRegistrarAndMessengerComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.DistributedCacheBinderComposer, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
-Umbraco.ModelsBuilder.Api.ModelsBuilderApiComposer, Umbraco.ModelsBuilder.Api, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 umbDemosite.Implementation.MyComposer, umbDemosite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Api.ModelsBuilderApiComposer, Umbraco.ModelsBuilder.Api, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.PropertyEditors.IPropertyValueConverter
 
@@ -410,6 +411,7 @@ Umbraco.Web.Controllers.UmbProfileController, Umbraco.Web, Version=8.0.0.0, Cult
 Umbraco.Web.Controllers.UmbLoginStatusController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+umbDemosite.Controllers.ContactFormController, umbDemosite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Web.Mvc.IRenderMvcController
 
@@ -493,6 +495,7 @@ Umbraco.Web.Controllers.UmbProfileController, Umbraco.Web, Version=8.0.0.0, Cult
 Umbraco.Web.Controllers.UmbLoginStatusController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
+umbDemosite.Controllers.ContactFormController, umbDemosite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.Dashboards.IDashboard
 
@@ -632,8 +635,5 @@ Umbraco.Core.Models.PublishedContent.PublishedElementModel
 
 
 Umbraco.Core.Models.PublishedContent.PublishedContentModel
-
-
-Umbraco.Core.Deploy.IServiceConnector
 
 

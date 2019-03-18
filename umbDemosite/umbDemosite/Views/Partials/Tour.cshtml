@@ -13,10 +13,11 @@
   <div class="row">
 
     @{
-      foreach (var tour in tourList)
-      {
-        var img = tour.GetProperty("heroImage").GetSourceValue().ToMediaUrl();
-
+        foreach (var tour in tourList)
+        {
+          var img = tour.GetProperty("heroImage").GetSourceValue().ToMediaUrl();
+          var aa = UmbracoContext.HttpContext.Request.RawUrl ;
+           Response.Write(aa);
         <div class="col-sm-4">
           <div class="thumbnail">
             <a href="Event-Detail.html">

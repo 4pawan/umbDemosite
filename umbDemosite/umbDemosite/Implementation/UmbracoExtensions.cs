@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Umbraco.Core;
 using Umbraco.Core.Collections;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
@@ -25,6 +26,18 @@ namespace umbDemosite.Implementation
         {
             return UmbHelper.Media(content).Url;
         }
+
+
+        /// <summary>
+        /// Gets the specified content udi.
+        /// </summary>
+        /// <param name="content">The content.</param>
+        /// <returns>The content udi.</returns>
+        public static Udi GetUdi(this IPublishedContent content)
+        {
+           return Udi.Create(Constants.UdiEntityType.Document, content.Id.ToString());
+        }
+
 
         //public static IPublishedContent GetCurrentNodeId(this object content)
         //{
